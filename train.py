@@ -78,8 +78,8 @@ dataSetPath = os.path.join(mainPath, "dataset")
 outputPath = os.path.join(mainPath, "output")
 
 # Training hyper parameters:
-epochs = 10
-gamma = 1.0  # Learning rate factor
+epochs = 10     # Increase epochs
+gamma = 1.0     # Learning rate factor, increase in 0.1 units
 learningRate = gamma * 1e-3
 batchSize = 32  # Could be: 16, 32, 64 In general, the smaller the better
 imageDimensions = (75, 75, 3)  # The image is resized to these dimensions
@@ -90,6 +90,9 @@ epochCounter = 0
 # initialize the data and labels
 data = []
 labels = []
+
+# Image counter:
+imageCounter = 0
 
 # Load each image path of the dataset:
 print("[Pokenet - Train] Loading images...")

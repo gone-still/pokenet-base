@@ -11,7 +11,7 @@ import numpy as np
 import pickle
 import cv2
 from imutils import paths
-
+import os
 
 # Reads image via OpenCV:
 def readImage(imagePath):
@@ -54,8 +54,8 @@ classDictionary = {0: "bulbasaur", 1: "charmander", 2: "mewtwo", 3: "pika", 4: "
 
 # Load model:
 print("[Pokenet - Test] Loading network...")
-model = load_model(modelPath + "pokenet.model")
-lb = pickle.loads(open(modelPath + "labels.pickle", "rb").read())
+model = load_model(os.path.join(modelPath, "pokenet.model")
+lb = pickle.loads(open(os.path.join(modelPath, "labels.pickle"), "rb").read())
 
 # Get the test images paths:
 imagePaths = sorted(list(paths.list_images(examplesPath)))
