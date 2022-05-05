@@ -54,7 +54,7 @@ classDictionary = {0: "bulbasaur", 1: "charmander", 2: "mewtwo", 3: "pika", 4: "
 
 # Load model:
 print("[Pokenet - Test] Loading network...")
-model = load_model(os.path.join(modelPath, "pokenet.model")
+model = load_model(os.path.join(modelPath, "pokenet.model"))
 lb = pickle.loads(open(os.path.join(modelPath, "labels.pickle"), "rb").read())
 
 # Get the test images paths:
